@@ -11,8 +11,8 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 },{"handlebars/dist/handlebars.runtime":"pAws"}],"Z6FK":[function(require,module,exports) {
 "use strict";var e=u(require("./menu.json")),t=u(require("./templates/menu-item.hbs"));function u(e){return e&&e.__esModule?e:{default:e}}var r=document.querySelector(".js-menu"),n=(0,t.default)(e.default);r.insertAdjacentHTML("beforeend",n);
 },{"./menu.json":"mA8c","./templates/menu-item.hbs":"eREJ"}],"m3VC":[function(require,module,exports) {
-var e={LIGHT:"light-theme",DARK:"dark-theme"},t={input:document.querySelector(".theme-switch__toggle"),body:document.querySelector("body")};function o(){localStorage.getItem("theme")===e.DARK?(t.body.classList.toggle(e.DARK),t.input.checked=!0):(t.body.classList.toggle(e.LIGHT),t.input.checked=!1)}function c(o){o.preventDefault(),o.target.checked?(localStorage.setItem("theme",e.DARK),t.body.classList.remove(e.LIGHT),t.body.classList.add(localStorage.getItem("theme"))):(localStorage.setItem("theme",e.LIGHT),t.body.classList.remove(e.DARK))}o(),t.input.addEventListener("change",c);
+var e={LIGHT:"light-theme",DARK:"dark-theme"},t={input:document.querySelector(".theme-switch__toggle"),body:document.querySelector("body")};function a(){t.body.classList.add(null===localStorage.getItem("theme")?e.LIGHT:localStorage.getItem("theme")),t.body.classList.value===e.DARK&&(t.input.checked=!0)}function c(a){a.preventDefault(),a.target.checked?(localStorage.setItem("theme",e.DARK),t.body.classList.replace(e.LIGHT,e.DARK)):(localStorage.setItem("theme",e.LIGHT),t.body.classList.replace(e.DARK,e.LIGHT))}a(),t.input.addEventListener("change",c);
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./styles.css");var e=s(require("./menu.js")),r=s(require("./theme.js"));function s(e){return e&&e.__esModule?e:{default:e}}
 },{"./styles.css":"Tnu0","./menu.js":"Z6FK","./theme.js":"m3VC"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-10-food-service/src.72007c65.js.map
+//# sourceMappingURL=/goit-js-hw-10-food-service/src.297e7ee0.js.map
